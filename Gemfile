@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'react_on_rails'
+gem 'pry'
+gem 'pry-remote'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
