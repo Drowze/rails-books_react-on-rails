@@ -2,8 +2,9 @@
   "scripts": {
     "postinstall": "cd client && yarn install"
   },
-
   "name": "basic-react-on-rails",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
 }

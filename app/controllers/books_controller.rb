@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   skip_before_action :verify_authenticity_token
+  layout "book"
 
   def index
     @books = Book.all
@@ -12,7 +13,8 @@ class BooksController < ApplicationController
   end
 
   def show
-    render json: Book.find(params.fetch(:id)), status: :ok
+    book = Book.find(params.fetch(:id))
+    @book_props = { title: book.title, year: book.year, author: book.author }
   rescue ActiveRecord::RecordNotFound
     render status: :not_found
   end
